@@ -131,62 +131,24 @@ img { display: block; max-width: 100%; }
 .hero {
   position: relative;
   height: 460px;
-  background:
-    linear-gradient(100deg, rgba(40,30,20,.18) 0%, rgba(40,30,20,.02) 45%),
-    linear-gradient(180deg, #efe6d3 0%, #e7d8b8 38%, #cba874 100%);
   overflow: hidden;
 }
 
-.hero-desk {
+.hero-bg {
   position: absolute;
-  left: 0; right: 0; bottom: 0;
-  height: 30%;
-  background: linear-gradient(180deg, #b9966a 0%, #8c6a45 100%);
-  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  z-index: 0;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(30,22,14,.32) 0%, rgba(30,22,14,.05) 55%);
-}
-
-.hero-deco {
-  position: absolute;
-  inset: 0;
   z-index: 1;
-}
-
-.hero-lamp-shade {
-  position: absolute;
-  right: 22%;
-  bottom: 46%;
-  width: 78px;
-  height: 60px;
-  background: #f7f2e8;
-  border-radius: 50% 50% 45% 45%;
-  opacity: .96;
-}
-
-.hero-lamp-base {
-  position: absolute;
-  right: calc(22% + 33px);
-  bottom: 38%;
-  width: 12px;
-  height: 36px;
-  background: #ece3d2;
-  opacity: .9;
-}
-
-.hero-chair {
-  position: absolute;
-  right: 6%;
-  bottom: 0;
-  width: 190px;
-  height: 64%;
-  background: linear-gradient(180deg, #f3ede1 0%, #e8dfcd 100%);
-  border-radius: 70px 70px 16px 16px;
-  opacity: .85;
+  background: linear-gradient(90deg, rgba(30,22,14,.32) 0%, rgba(30,22,14,.05) 55%);
 }
 
 .hero-content {
@@ -286,15 +248,9 @@ img { display: block; max-width: 100%; }
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 4px;
-  background-size: cover;
-  background-position: center;
+  object-fit: cover;
+  background: var(--cream-deep);
 }
-
-.cat-bedroom    { background: linear-gradient(155deg,#e8ddc8,#cbb38c 55%,#fff 100%); }
-.cat-livingroom { background: linear-gradient(155deg,#ded2c2,#b89a78 60%,#f1e9da 100%); }
-.cat-diningroom { background: linear-gradient(155deg,#e3d9c6,#c4a06a 65%,#efe6d4 100%); }
-.cat-decoration { background: linear-gradient(155deg,#e7e0d2,#cfc2a3 60%,#f4efe2 100%); }
-.cat-office     { background: linear-gradient(155deg,#ddd4c4,#9c8362 70%,#e9e0cd 100%); }
 
 /* ============ ABOUT / CRAFTSMANSHIP ============ */
 .about-section { padding-top: 60px; }
@@ -329,21 +285,12 @@ img { display: block; max-width: 100%; }
 }
 
 .about-img {
+  width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 3px;
-  background-size: cover;
-  background-position: center;
+  object-fit: cover;
+  background: var(--cream-deep);
 }
-
-.img-hold-stool { background: linear-gradient(160deg,#d7c7a8,#8c704a); }
-.img-write      { background: linear-gradient(160deg,#f1ece1,#d8cdb6); }
-.img-stool      { background: linear-gradient(160deg,#e9e2d2,#b89a6f); }
-.img-weave      { background: linear-gradient(160deg,#c9b48b,#7c6240); }
-.img-shape      { background: linear-gradient(160deg,#9a7c52,#5d4326); }
-.img-sand       { background: linear-gradient(160deg,#bcae95,#6e7b74); }
-.img-hands      { background: linear-gradient(160deg,#e7decb,#a98e63); }
-.img-shelf      { background: linear-gradient(160deg,#d9d2c2,#4a4742); }
-.img-finish     { background: linear-gradient(160deg,#ece6d8,#c7b896); }
 
 .about-text {
   display: flex;
@@ -368,36 +315,23 @@ img { display: block; max-width: 100%; }
 .commitment-banner {
   position: relative;
   height: 360px;
-  background: linear-gradient(160deg, #d9c39a 0%, #c4a06a 35%, #9c7748 70%, #7a5635 100%);
   overflow: hidden;
 }
 
-.commitment-banner::before {
-  content: "";
+.commitment-bg {
   position: absolute;
-  left: -10%;
-  bottom: -30%;
-  width: 55%;
-  height: 90%;
-  background: radial-gradient(ellipse at center, rgba(245,238,222,.5) 0%, transparent 70%);
-  border-radius: 50%;
-}
-
-.commitment-banner::after {
-  content: "";
-  position: absolute;
-  right: -8%;
-  top: -25%;
-  width: 40%;
-  height: 70%;
-  background: radial-gradient(ellipse at center, rgba(70,50,28,.35) 0%, transparent 70%);
-  border-radius: 50%;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 
 .commitment-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(30,20,10,.18);
+  z-index: 1;
+  background: rgba(30,20,10,.35);
 }
 
 .commitment-content {
@@ -439,15 +373,9 @@ img { display: block; max-width: 100%; }
   aspect-ratio: 1 / 1;
   border-radius: 4px;
   margin-bottom: 12px;
-  background-size: cover;
-  background-position: center;
+  object-fit: cover;
+  background: var(--cream-deep);
 }
-
-.prod-bedside   { background: linear-gradient(160deg,#ece4d3,#c2a878); }
-.prod-dining    { background: linear-gradient(160deg,#e7e1d3,#a98f6a); }
-.prod-sideboard { background: linear-gradient(160deg,#d8cdb8,#85735a); }
-.prod-bookcase  { background: linear-gradient(160deg,#e3d8c2,#9c7c52); }
-.prod-shelf     { background: linear-gradient(160deg,#ece6d8,#bca77e); }
 
 .badge {
   position: absolute;
@@ -595,7 +523,8 @@ img { display: block; max-width: 100%; }
   width: 100%;
   aspect-ratio: 4 / 5;
   border-radius: 4px;
-  background: linear-gradient(160deg, #d4ccbd 0%, #8c8275 55%, #4a4640 100%);
+  object-fit: cover;
+  background: var(--cream-deep);
 }
 
 .footer-bottom {
